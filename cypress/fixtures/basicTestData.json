@@ -1,0 +1,57 @@
+[
+  {
+    "TestName":"Testing happy path submition with all fields",
+    "firstName":"Ashif",
+    "lastName":"Uzzaman",
+    "contactType":"Transferee",
+    "oPhone": "1234567890",
+    "mPhone": "1234567890",
+    "hPhone": "1234567890",
+    "pEmail": "test@test.com",
+    "sEmail": "test@test.com"
+  },
+  {
+    "TestName":"Testing submition with required fields",
+    "firstName":null,
+    "lastName":"Uzzaman",
+    "contactType":"Transferee",
+    "oPhone": null,
+    "mPhone": null,
+    "hPhone": null,
+    "pEmail": null,
+    "sEmail": null
+  },
+  {
+    "TestName":"Testing failure to submit due to missing contact type",
+    "firstName":"Ashif",
+    "lastName":"Uzzaman",
+    "contactType":"Select one",
+    "oPhone": "1234567890",
+    "mPhone": "1234567890",
+    "hPhone": "1234567890",
+    "pEmail": "test@test.com",
+    "sEmail": "test@test.com"
+  },
+  {
+    "TestName":"Testing failure to submit due to contact type other than Transferee contact type",
+    "firstName":"Ashif",
+    "lastName":"Uzzaman",
+    "contactType":"Different contact type",
+    "oPhone": "1234567890",
+    "mPhone": "1234567890",
+    "hPhone": "1234567890",
+    "pEmail": "test@test.com",
+    "sEmail": "test@test.com"
+  },
+  {
+    "TestName":"Testing failure to submit due to invalid characters entered in input field",
+    "firstName":"123@#",
+    "lastName":"A!@S@21",
+    "contactType":"Different contact type",
+    "oPhone": "assad@@!#@ ",
+    "mPhone": "kjcnce#*@3",
+    "hPhone": "!#@#@!sdfefef",
+    "pEmail": "test@test",
+    "sEmail": "test#test.com"
+  }
+]
