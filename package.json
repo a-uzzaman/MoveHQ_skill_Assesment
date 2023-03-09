@@ -1,0 +1,15 @@
+{
+  "name": "movehq_skill_assesment",
+  "version": "1.0.0",
+  "description": "This is the skill assessment for MoveHQ SDET Lead position.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@testing-library/cypress": "^9.0.0",
+    "cypress": "^12.7.0"
+  }
+}
