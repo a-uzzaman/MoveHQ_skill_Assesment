@@ -1,6 +1,6 @@
 [
   {
-    "TestName":"Testing happy path successful submition with all fields",
+    "TestName":"Testing happy path successful submission with all fields",
     "customerNumber": "12345",
     "firstName":"Ashif",
     "lastName":"Uzzaman",
@@ -12,7 +12,7 @@
     "sEmail": "test@test.com"
   },
   {
-    "TestName":"Testing happy path successful submition with different phone nuber format",
+    "TestName":"Testing happy path successful submission with different phone nuber format",
     "customerNumber": "12345",
     "firstName":"Ashif",
     "lastName":"Uzzaman",
@@ -24,7 +24,7 @@
     "sEmail": "test@test.com"
   },
   {
-    "TestName":"Testing successful submition with required fields",
+    "TestName":"Testing successful submission with required fields",
     "customerNumber": "",
     "firstName":"",
     "lastName":"Uzzaman",
