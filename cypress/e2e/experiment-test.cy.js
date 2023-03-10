@@ -14,7 +14,7 @@ describe("This is test the new contact page", ()=>{
             it(element.TestName, ()=>{
 
                 //Using custom command to to fill out the form using the test data
-                cy.fillNewContactFormWithAllFieldsWithSelectors(element.contactType,element.customerNumber,element.firstName,element.lastName,element.oPhone,element.mPhone,element.hPhone,element.pEmail,element.sEmail);
+                cy.fillNewContactFormWithAllFields(element.contactType,element.customerNumber,element.firstName,element.lastName,element.oPhone,element.mPhone,element.hPhone,element.pEmail,element.sEmail);
             })
         }
     })
