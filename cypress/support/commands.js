@@ -76,6 +76,34 @@ Cypress.Commands.add("validateErrorsNewContactForms",(testType)=>{
     }
 })
 
-Cypress.Commands.add("validateNewContactCreated",(testData)=>{
-    
+Cypress.Commands.add("validateNewContactCreatedThroughAPI",(testData,APIUrl)=>{
+    cy.request({
+        method: 'GET',
+        url: APIUrl,
+        failOnStatusCode: false,
+    }).as('details');
+    //Validate status code
+    cy.get('@details').its('status').should('eq', 200)
+    cy.get('@details').then((response) => {
+        cy.log(JSON.stringify(response.body))
+    });
+    const resData= cy.get('@details').then((response) => {
+        return response.json();
+    });
+
+    if(testData.TestName.includes('required')){
+        expect(resData.contactType).to.eq(testData.contactType);
+        expect(resData.lastName).to.eq(testData.lastName);
+    }else{
+        expect(resData.contactType).to.eq(testData.contactType);
+        expect(resData.firstName).to.eq(testData.firstName);
+        expect(resData.lastName).to.eq(testData.lastName);
+        expect(resData.oPhone).to.eq(testData.oPhone);
+        expect(resData.mPhone).to.eq(testData.mPhone);
+        expect(resData.hPhone).to.eq(testData.hPhone);
+        expect(resData.pEmail).to.eq(testData.pEmail);
+        expect(resData.sEmail).to.eq(testData.sEmail);
+    }
+
+
 })
