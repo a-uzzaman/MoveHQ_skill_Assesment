@@ -5,7 +5,7 @@ const testData= require("../fixtures/basicTestData.json")
 
 describe("All test cases related to new contact page", ()=>{
 
-    before(function() {
+    before(()=>{
         //Assuming new contact url will be ending with new-contact
         cy.visit('/');
     }) 
@@ -42,12 +42,12 @@ describe("All test cases related to new contact page", ()=>{
                   Then the custom command will validate the data was stored correctly
                 
                   */
-                cy.usingApiToValidateNewContact(element,baseUrl+"/contact/"+element.customerNumber)
+                cy.usingApiToValidateNewContact(element,"/contact/"+element.customerNumber)
             })
         }else if(element.TestName.includes('required')){
             it(element.TestName, ()=>{
                 cy.fillNewContactFormWithAllFieldsWithSelectors(element.contactType,element.customerNumber,element.firstName,element.lastName,element.oPhone,element.mPhone,element.hPhone,element.pEmail,element.sEmail);
-                cy.usingApiToValidateNewContact(element,baseUrl+"/contact/"+element.customerNumber)
+                cy.usingApiToValidateNewContact(element,"/contact/"+element.customerNumber)
 
             })
         }else {

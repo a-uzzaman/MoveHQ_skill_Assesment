@@ -1,4 +1,5 @@
 import '@testing-library/cypress/add-commands';
+// import '@faker-js/faker';
 
 // ***********************************************
 // This example commands.js shows you how to
@@ -190,6 +191,28 @@ Cypress.Commands.add("usingApiToValidateNewContactSubmition",(testData,APIUrl,re
         expect(resData.sEmail).to.eq(testData.sEmail);
     }
 
-
-
+    
 })
+//Command to generate random test data for new contacts where you need put the number of contacts you want to create in line 201
+// Cypress.Commands.add("generateTestData", ()=>{
+        
+//     const faker = require('@faker-js/faker');
+
+//     cy.writeFile('cypress/fixtures/new_contacts_randomly_generated.json', {
+//      //times is the number of records that will be created
+//       'hits':Cypress._.times(20, () => {
+//         return {
+//           'TestName':'Testing with random data generated successful submition with all fields',
+//         //   'customerNumber': `${faker.datatype.number()}`,
+//           'firstName':`${faker.name.firstName()}`,
+//           'lastName':`${faker.name.lastName()}`,
+//           'contactType':'Transferee',
+//           'oPhone': `${faker.phone.number('###-###-###')}`,
+//           'mPhone': `${faker.phone.number('+48 91 ### ## ##')}`,
+//           'hPhone': `${faker.phone.number()}`,
+//           'pEmail': `${faker.internet.email()}`,
+//           'sEmail': `${faker.internet.email()}`
+//         }
+//       })
+//     })
+//   })
