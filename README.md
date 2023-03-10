@@ -1,7 +1,7 @@
 # **MoveHQ skill Assesment**
 
 ## **Description**
-This is the skill assessment for MoveHQ SDET Lead position.This is an UI atomation project to test the submition of a form using cypress. Please run the test in CLI. I want to see if the [experiment-test.cy.js](cypress\e2e\experiment-test.cy.js) solution to use label text to locate the input field worked. Before running the test please update the baseURL with the URL for the form in the [cypress.config.js]() file. I am pretty sure the tests in [new_contatc_form-test.cy.js](cypress\e2e\new_contact_form-test.cy.js)
+This is the skill assessment for MoveHQ SDET Lead position.This is an UI atomation project to test the submition of a form using cypress. Please run the test in CLI. I want to see if the [experiment-test.cy.js](cypress\e2e\experiment-test.cy.js) solution to use label text to locate the input field worked. Before running the test please update the baseURL with the URL for the form in the [cypress.config.js]() file. I am pretty sure the tests in [new_contatc_form-test.cy.js](cypress\e2e\new_contact_form-test.cy.js) will fail and all validation will fail, there is a possibility that the experent test might work.
 ## **Pre-Requisites**
 * Install [VSCode](https://code.visualstudio.com/download)
 * Install [NodeJs](https://nodejs.org/en/download/)
@@ -45,8 +45,8 @@ npm run reports:generate
 * cypress
     * [e2e](cypress/e2e) (Test case folder)
         * [new_contact_form-test](cypress/e2e/new_contact_form-test.cy.js) This file contains cypress tests for the following scenarios according to the [Test Data file](cypress\fixtures\basicTestData.json) 
-            * Testing happy path submition with all fields
-            * Testing submition with required fields
+            * Testing happy path submition with all fields and record has been saved
+            * Testing submition with required fields and record has been saved
             * Testing failure to submit due to missing contact type
             * Testing failure to submit due to contact type other than Transferee contact type
             * Testing failure to submit due to invalid characters entered in input field
