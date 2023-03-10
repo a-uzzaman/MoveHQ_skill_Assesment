@@ -1,6 +1,7 @@
 [
   {
-    "TestName":"Testing happy path submition with all fields",
+    "TestName":"Testing happy path successful submition with all fields",
+    "customerNumber": "12345",
     "firstName":"Ashif",
     "lastName":"Uzzaman",
     "contactType":"Transferee",
@@ -11,18 +12,20 @@
     "sEmail": "test@test.com"
   },
   {
-    "TestName":"Testing submition with required fields",
-    "firstName":null,
+    "TestName":"Testing successful submition with required fields",
+    "customerNumber": "",
+    "firstName":"",
     "lastName":"Uzzaman",
     "contactType":"Transferee",
-    "oPhone": null,
-    "mPhone": null,
-    "hPhone": null,
-    "pEmail": null,
-    "sEmail": null
+    "oPhone": "",
+    "mPhone": "",
+    "hPhone": "",
+    "pEmail": "",
+    "sEmail": ""
   },
   {
     "TestName":"Testing failure to submit due to missing contact type",
+    "customerNumber": "12345",
     "firstName":"Ashif",
     "lastName":"Uzzaman",
     "contactType":"Select one",
@@ -33,10 +36,23 @@
     "sEmail": "test@test.com"
   },
   {
-    "TestName":"Testing failure to submit due to contact type other than Transferee contact type",
+    "TestName":"Testing failure to submit due to missing required fields",
+    "customerNumber": "12345",
+    "firstName":"Ashif",
+    "lastName":"",
+    "contactType":"",
+    "oPhone": "1234567890",
+    "mPhone": "1234567890",
+    "hPhone": "1234567890",
+    "pEmail": "test@test.com",
+    "sEmail": "test@test.com"
+  },
+  {
+    "TestName":"Testing failure to submit due to contact type other than Transferee contact type selected",
+    "customerNumber": "12345",
     "firstName":"Ashif",
     "lastName":"Uzzaman",
-    "contactType":"Different contact type",
+    "contactType":"Different contact type selected",
     "oPhone": "1234567890",
     "mPhone": "1234567890",
     "hPhone": "1234567890",
@@ -45,6 +61,7 @@
   },
   {
     "TestName":"Testing failure to submit due to invalid characters entered in input field",
+    "customerNumber": "12345",
     "firstName":"123@#",
     "lastName":"A!@S@21",
     "contactType":"Different contact type",
