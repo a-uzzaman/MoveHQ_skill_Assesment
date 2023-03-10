@@ -161,7 +161,7 @@ Cypress.Commands.add("validateContactDataDisplayedCorrectly",(testData)=>{
 
 //This method was used to validate that newly created contact information matches from the database
 //by passing the testdata, API endpoint and the request method type ie. GET, POST, PUT, DELETE, etc.
-Cypress.Commands.add("usingApiToValidateNewContactSubmition",(testData,APIUrl,reqMethodType)=>{
+Cypress.Commands.add("usingApiToValidateNewContactsubmission",(testData,APIUrl,reqMethodType)=>{
     cy.request({
         method: reqMethodType,
         url: APIUrl,
@@ -202,7 +202,7 @@ Cypress.Commands.add("usingApiToValidateNewContactSubmition",(testData,APIUrl,re
 //      //times is the number of records that will be created
 //       'hits':Cypress._.times(20, () => {
 //         return {
-//           'TestName':'Testing with random data generated successful submition with all fields',
+//           'TestName':'Testing with random data generated successful submission with all fields',
 //         //   'customerNumber': `${faker.datatype.number()}`,
 //           'firstName':`${faker.name.firstName()}`,
 //           'lastName':`${faker.name.lastName()}`,
