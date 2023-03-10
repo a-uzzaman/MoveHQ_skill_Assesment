@@ -12,6 +12,18 @@
     "sEmail": "test@test.com"
   },
   {
+    "TestName":"Testing happy path successful submition with different phone nuber format",
+    "customerNumber": "12345",
+    "firstName":"Ashif",
+    "lastName":"Uzzaman",
+    "contactType":"Transferee",
+    "oPhone": "123-456-7890",
+    "mPhone": "1234567890",
+    "hPhone": "123-456-7890 ext:1456",
+    "pEmail": "test@test.com",
+    "sEmail": "test@test.com"
+  },
+  {
     "TestName":"Testing successful submition with required fields",
     "customerNumber": "",
     "firstName":"",

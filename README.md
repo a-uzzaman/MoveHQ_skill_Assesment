@@ -51,6 +51,7 @@ npm run reports:generate
             * Testing failure to submit due to contact type other than Transferee contact type
             * Testing failure to submit due to invalid characters entered in input field
             * Testing failure to submit due to missing required fields
+            * Testing happy path successful submition with different phone nuber format
         * **Note:-** Please be aware even though there is only 3 'it' Test methods in the spec test file it will run all scenarios according to the test data file. 
     * [fixtures](cypress/fixtures) (Folder for test data)
     * [support](cypress/support) (Folder for supporting files like custom commands)
